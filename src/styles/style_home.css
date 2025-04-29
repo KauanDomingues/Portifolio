@@ -1,0 +1,38 @@
+:root {
+    --color-1: #B78953;
+    --color-2: #964734;
+    --color-3: #692721;
+    --color-4: #4C563F;
+    --color-5: #243533;
+    --font-family-1: "Pixelify Sans", sans-serif: 
+}
+
+#container-body-home {
+    font-family: var(--font-family-1);
+}
+
+#header-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-4);
+    height: 80px;
+    color: var(--color-1);
+    font-family: var(--font-family-1);
+}
+
+#header-home > div, #header-home > nav{
+    margin: 20px;
+}
+
+#header-title {
+    font-size: 32px;
+    padding: 3px;
+    border-bottom: 2px solid var(--color-2);
+    border-radius: 20px;
+}
+
+footer {
+    background-color: var(--color-5);
+    height: 9em;
+}
