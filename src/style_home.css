@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
 :root {
     --color-primary: rgb(215, 215, 215);
     --color-primary-lighter: white;
@@ -5,7 +7,7 @@
     --color-secondary-darker: black;
     --bgdark: #262626;
     --bglight: #D9D9D9;
-    --font-family-1: "Pixelify Sans", sans-serif: 
+    --font-family-1: 'M+ PLUS Rounded 1c', sans-serif: 
 }
 
 html {
@@ -22,6 +24,7 @@ html {
     background-color: var(--bgdark);
     color: var(--color-primary);
     text-align: center;
+    font-family: var(--font-family-1) !important;
 }
 
 #main-nav {
@@ -69,18 +72,26 @@ html {
 #container-me {
     background-color: var(--bglight);
     color: var(--color-secondary);
+    padding-bottom: 8%;
     height: 100vh;
 }
-#me-description {
-    display: flex;
+#me-description { 
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 .me-text {
     font-size: 24px;
     text-align: center;
 }
 
+#me-description-present {
+    grid-column-start: 1;
+}
+
 #me-description-hist {
-    justify-self: flex-end;
+    grid-column-start: 2;
+    grid-row-start: 2;
 }
 
 /* Container Projects */
