@@ -77,13 +77,20 @@ html {
 }
 #me-text-main {
     font-size: 26px;
-    width: 50%;
+    width: 70%;
     text-align: center;
+    border: 3px solid var(--color-secondary);
+    padding: 20px;
 }
 #me-text-formation {
-    width: 50%;
+    width: 70%;
     justify-self: flex-end;
     font-size: 26px;
+    margin-top: 40px;
+    border: 3px solid var(--color-secondary);
+    padding: 20px;
+
+
 }
 .me-text {
     font-size: 26px;
@@ -113,6 +120,11 @@ html {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+.project-name {
+    font-size: 30px;
+    color: var(--color-primary);
+    margin-top: 10px;
 }
 .project-view {
     width: 90%;
