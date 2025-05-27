@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 certCarItems[idn].classList.remove('active');
             };
             modalCert.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
             const id = event.currentTarget.dataset.id;
             console.log(id)
             certCarItems[id].classList.add('active');
@@ -55,9 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalCert.addEventListener('click', function (e) {
     if (e.target === modalCert) {
+        document.body.style.overflow = '';
         modalCert.style.display = 'none';
     }
     });
-
-})
+});
 

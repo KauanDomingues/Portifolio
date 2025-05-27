@@ -4,9 +4,7 @@
     --color-primary: #cacaca;
     --color-secondary: #40B6D7;
     --bgdark: #17181b;
-    --bglight: #D9D9D9;
     --border-primary: 2px solid var(--color-secondary);
-    --font-family-1: 'M+ PLUS Rounded 1c', sans-serif:
 }
 
 html {
@@ -29,6 +27,27 @@ body * {
 
 strong {
     color: var(--color-secondary);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; 
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 10px;
+  border: 0.2px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 
@@ -84,8 +103,7 @@ strong {
 }
 
 .container-header-img {
-    width: 150px;
-    height: auto;
+    height: 70px;
     margin: 0 10px;
 }
 
@@ -348,17 +366,24 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 20vh;
+    background-color: #141418;
 }
 
-footer {
-    background-image:
-        linear-gradient(45deg, #333 25%, transparent 25%),
-        linear-gradient(-45deg, #333 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #333 75%),
-        linear-gradient(-45deg, transparent 75%, #333 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+
+@media (max-width: 725px) {
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+    }
+}
+
+@media (max-width: 560px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+
+    }
 }
 
 /* Links */
@@ -380,8 +405,8 @@ footer {
 /* Footer Links */
 #link-linkedin {
     background-image: url(../files/logo-Linkedin.png);
-    width: 17em;
-    height: 4.4em;
+    width: 4em;
+    height: 4.07em;
     background-size: cover;
     transition: background-img 0.6s ease;
 }
@@ -412,6 +437,30 @@ footer {
 
 #link-github:hover {
     background-image: url(../files/logo-github-filled.png);
+}
+
+.btn-save-cv {
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background-image: url(../files/icon-save.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-save-cv:hover {
+    background-image: url(../files/icon-save-filled.png);
+}
+
+.link-box {
+    margin: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
 /* /links */
