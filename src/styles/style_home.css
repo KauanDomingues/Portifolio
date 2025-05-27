@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
-
 :root {
     --color-primary: #cacaca;
     --color-secondary: #40B6D7;
@@ -12,7 +10,7 @@ html {
 }
 
 body {
-    background-color: var(--bgdark);
+    background-color: #111114;
     text-align: center;
     font-family: 'VT323', monospace;
     font-size: 20px;
@@ -23,6 +21,20 @@ body {
 body * {
     margin: 0;
     padding: 0;
+}
+
+#mouse-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: #40b6d7b7;
+  filter: blur(40px);
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 strong {
@@ -52,10 +64,7 @@ strong {
 
 
 #container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    background-image: url(../files/hexa.png);
 }
 
 /* Container class */
@@ -71,10 +80,17 @@ strong {
 #container-cpu {
     height: 100vh;
     display: flex;
+    background: linear-gradient(to bottom, #111114, #1111143a);
     justify-content: center;
 }
 
+#container-cpu-bg {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
 #cpu {
+    z-index: 2;
     background-image: url(../files/CPU.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -99,7 +115,7 @@ strong {
     position: sticky;
     top: 0;
     background-color: var(--bgdark);
-    box-shadow: 0 0 30px 1px var(--bgdark);
+    box-shadow: 0 0 30px 3px #020202;
 }
 
 .container-header-img {
@@ -111,6 +127,10 @@ strong {
     margin: 15px;
     height: 30px;
     width: 30px;
+}
+
+.content {
+    box-shadow: 0 0 30px 3px var(--bgdark);
 }
 
 .btn-prev,
@@ -133,240 +153,13 @@ strong {
     cursor: pointer;
 }
 
-/* Section - container about me */
-
-#container-me {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-#content-me {
-    height: 95vh;
-    width: 97%;
-    justify-self: center;
-    border: var(--border-primary);
-    overflow-y: scroll;
-    background-color: var(--bgdark);
-    flex-direction: column;
-}
-
-#me-body {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#me-body>* {
-    margin: 20px;
-}
-
-#formation-list {
-    text-align: left;
-    line-height: 1.1;
-}
-
-#formation-list dd {
-    margin-left: 25px;
-}
-
-@media (max-width: 1270px) {
-    #me-body {
-        flex-direction: column-reverse;
-    }
-}
-
-/* Section - Container Projects */
-
-#container-projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-#content-projects {
-    width: 97%;
-    justify-self: center;
-    border: var(--border-primary);
-    height: 95vh;
-    overflow: hidden;
-    background-color: var(--bgdark);
-}
-
-#projects-body {
-    height: 89%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-#projects-carousel {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.img-container {
-    margin-top: 10px;
-    align-self: center;
-    max-height: 250px;
-    max-width: 700px;
-    border-radius: 20px;
-    border: var(--border-primary);
-    overflow: hidden;
-}
-
-.pro-car-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-.pro-car-item dl {
-    margin: 20px;
-    max-width: 700px;
-    font-size: 20px;
-    text-align: left;
-}
-
-.pro-car-item dd {
-    margin-left: 20px;
-}
-
-.pro-car-item {
-    margin-bottom: 10px;
-    height: 100%;
-    display: none;
-    justify-content: center;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.pro-car-item ::-webkit-scrollbar {
-    display: none;
-}
-
-.pro-car-item.active {
-    display: block;
-}
-
-/* Section - Container Certificates */
-
-#container-certificates {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-#content-certificates {
-    width: 97%;
-    justify-self: center;
-    border: var(--border-primary);
-    height: 95vh;
-    overflow-y: auto;
-    background-color: var(--bgdark);
-}
-
-#certificates-body {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
-}
-
-#certificates-body>div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.certificates-container-img {
-    height: 250px;
-    width: 300px;
-    border: var(--border-primary);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.certificates-container-img img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-#modal-certificates {
-    height: 100vh;
-    width: 100vw;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-#modal-certificates-content {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#certificates-carousel img{
-    border: var(--border-primary);
-}
-
-.cert-car-item {
-    margin-bottom: 10px;
-    height: 100%;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.cert-car-item.active {
-    display: flex;
-}
-
-@media (max-width: 1075px) {
-    .certificates-container-img {
-        height: 150px;
-        width: 200px;
-    }
-}
-
-@media (max-width: 725px) {
-    #certificates-body {
-        grid-template-columns: 50% 50%;
-        gap: 10px;
-    }
-
-    .certificates-container-img {
-        height: 100px;
-        width: 150px;
-    }
-}
-
-
 /* Footer - Contacts */
 
 footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #141418;
+    background: linear-gradient(to top, #111114, #1111140e);
 }
 
 
@@ -408,7 +201,7 @@ footer {
     width: 4em;
     height: 4.07em;
     background-size: cover;
-    transition: background-img 0.6s ease;
+    transition: background-image 0.6s ease;
 }
 
 #link-linkedin:hover {
@@ -420,7 +213,7 @@ footer {
     height: 72px;
     width: 88px;
     background-size: cover;
-    transition: background-img 0.3s ease;
+    transition: background-image 0.3s ease;
 }
 
 #link-mail:hover {
@@ -442,14 +235,10 @@ footer {
 .btn-save-cv {
     display: inline-block;
     height: 70px;
-    width: 70px;
-    background-image: url(../files/icon-save.png);
+    width: 72px;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+    background-image: url(../files/icon-save.png);
+    transition: background-image 0.3s ease;
 }
 
 .btn-save-cv:hover {
@@ -462,5 +251,3 @@ footer {
     flex-direction: column-reverse;
     align-items: center;
 }
-
-/* /links */

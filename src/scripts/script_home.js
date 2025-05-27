@@ -1,3 +1,11 @@
+const glow = document.getElementById('mouse-glow');
+
+document.addEventListener('mousemove', (e) => {
+  glow.style.top = `${e.clientY}px`;
+  glow.style.left = `${e.clientX}px`;
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // Carrossel progetos
@@ -40,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Modal
     const modalCert = document.getElementById('modal-certificates');
+    const modalCertContent = document.getElementById('modal-certificates-content');
 
     document.querySelectorAll('.certificates-container-img').forEach(elemento => {
         elemento.addEventListener('click', (event) => {
@@ -55,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     modalCert.addEventListener('click', function (e) {
-    if (e.target === modalCert) {
+    if (e.target == modalCert && e.target != modalCertContent) {
         document.body.style.overflow = '';
         modalCert.style.display = 'none';
     }

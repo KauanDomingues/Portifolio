@@ -1,0 +1,123 @@
+:root {
+    --color-primary: #cacaca;
+    --color-secondary: #40B6D7;
+    --bgdark: #17181b;
+    --border-primary: 2px solid var(--color-secondary);
+}
+
+
+/* Section - Container Certificates */
+
+#container-certificates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#content-certificates {
+    width: 97%;
+    justify-self: center;
+    border: var(--border-primary);
+    height: 95vh;
+    overflow-y: auto;    
+    box-shadow: 0 0 30px 3px #020202;
+    background: linear-gradient(to top, #111114, #1111148c);
+
+}
+
+#certificates-body {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+#certificates-body>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.certificates-container-img {
+    height: 250px;
+    width: 300px;
+    border: var(--border-primary);
+    border-radius: 10px;
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.certificates-container-img:hover {
+    filter: brightness(0.8);
+    box-shadow: 0 0 15px 1px var(--color-secondary);
+    cursor: pointer;
+}
+
+.certificates-container-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+#modal-certificates {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#modal-certificates-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#certificates-carousel img{
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    max-height: 80vh;
+}
+
+.cert-car-item {
+    margin-bottom: 10px;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.cert-car-item.active {
+    display: flex;
+}
+
+@media (max-width: 1075px) {
+    .certificates-container-img {
+        height: 150px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 725px) {
+    #certificates-body {
+        grid-template-columns: 50% 50%;
+        gap: 10px;
+    }
+
+    .certificates-container-img {
+        height: 100px;
+        width: 150px;
+    }
+}

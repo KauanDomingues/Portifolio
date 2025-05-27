@@ -7,6 +7,9 @@
     <title>Kauan Domingues - Portifólio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./styles/style_home.css">
+    <link rel="stylesheet" href="./styles/style_aboutme.css">
+    <link rel="stylesheet" href="./styles/style_projects.css">
+    <link rel="stylesheet" href="./styles/style_certificates.css">
     <script defer src="./scripts/script_home.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
@@ -16,14 +19,15 @@
 </head>
 
 <body>
-    <section class="container">
-        <div style="width: 100%; height: 100vh; overflow: hidden; position: absolute; z-index: -2;">
-            <img style="width: 100vw;" src="./files/cpu-buses.png" alt="desenho buses da cpu">
-        </div>
+    <div id="mouse-glow"></div>
+
+    <section id="container">
 
         <section id="container-cpu" class="full-screen">
+            <div id="container-cpu-bg"><img style="width: 100%;" src="./files/cpu-buses.png"
+                    alt="ilustração caminhos de cpu"></div>
             <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <h1 style="font-size: 50px;">Kauan Domingues</h1>
+                <h1 style="font-size: 50px; z-index: 2;">Kauan Domingues</h1>
                 <section id="cpu">
                     <nav id="main-nav" style="display: flex; flex-direction: column;">
                         <a class="one-link" href="#container-me">Sobre Mim</a>
@@ -35,66 +39,46 @@
         </section>
 
         <section id="container-me" class="full-screen">
-            <section id="content-me">
+            <section id="content-me" class="content">
                 <header class="container-header">
                     <img class="container-header-img" src="./files/img-rom.png" alt="">
                     <h1 class="container-header-text">Sobre Mim</h1>
                 </header>
 
-                <div style="display: flex; justify-content: center;">
-                    <article style="max-width: 700px; margin: 20px; line-height: 1.1; text-align: left;">
-                        <p>
-                            Bom dia! Meu nome é <strong>Kauan Domingues</strong> e sou estudante de <strong>Análise e
-                                Desenvolvimento de Sistemas</strong> na <strong>Fatec de São José dos Campos</strong>.
-                        </p>
-                        <p>
-                            Desde criança, eu sempre fui curioso, e gostava de criar. Desmontava aparelhos e montava
-                            minhas próprias "engenhocas".
-                        </p>
-                        <p>
-                            Com o tempo, isso foi virando interesse por <strong>desenvolvimento de jogos.</strong> Foi
-                            aí que entrei no curso PlayGame, da escola Saga, e comecei a entender mais sobre lógica de
-                            programação.
-                        </p>
-                        <p>
-                            No ensino médio, durante o curso de Operador de Microcomputador, fui escolhido pelo
-                            professor para um treinamento em <strong>computação em nuvem</strong>, na
-                            <strong>AWS</strong>, para participar da competição SP Skills, representando o SENAI de São
-                            José dos campos.
-                        </p>
-                        <p>
-                            Essa trajetória me guiou até o curso de ADS, onde continuo desenvolvendo minhas habilidades
-                            e viso me tornar um desenvolvedor Full Stack.
-                        </p>
-                    </article>
-                </div>
-
                 <section id="me-body">
-                    <section>
-                        <article style="border: var(--border-primary);">
-                            <h2 style="border-bottom: var(--border-primary);"><strong>Hard Skills</strong></h2>
-                            <dl style="text-align: left; padding: 8px;">
-                                <dt><strong>> Linguagens e Tecnologias:</strong></dt>
-                                <dd>HTML, CSS, JavaScript, Python, Git, GitHub</dd>
-                                <dt><strong>> Plataformas:</strong></dt>
-                                <dd>AWS (EC2, S3, RDS, Lambda), Figma (básico)</dd>
-                                <dt><strong>> Ferramentas:</strong></dt>
-                                <dd>VSCode, Trello </dd>
-                            </dl>
+                    <div style="display: flex; justify-content: center;">
+                        <article style="max-width: 700px; margin: 20px; line-height: 1.1; text-align: left;">
+                            <p>
+                                Bom dia! Meu nome é <strong>Kauan Domingues</strong> e sou estudante de <strong>Análise
+                                    e
+                                    Desenvolvimento de Sistemas</strong> na <strong>Fatec de São José dos
+                                    Campos</strong>.
+                            </p>
+                            <p>
+                                Desde criança, eu sempre fui curioso, e gostava de criar. Desmontava aparelhos e montava
+                                minhas próprias "engenhocas".
+                            </p>
+                            <p>
+                                Com o tempo, isso foi virando interesse por <strong>desenvolvimento de jogos.</strong>
+                                Foi
+                                aí que entrei no curso PlayGame, da escola Saga, e comecei a entender mais sobre lógica
+                                de
+                                programação.
+                            </p>
+                            <p>
+                                No ensino médio, durante o curso de Operador de Microcomputador, fui escolhido pelo
+                                professor para um treinamento em <strong>computação em nuvem</strong>, na
+                                <strong>AWS</strong>, para participar da competição SP Skills, representando o SENAI de
+                                São
+                                José dos campos.
+                            </p>
+                            <p>
+                                Essa trajetória me guiou até o curso de ADS, onde continuo desenvolvendo minhas
+                                habilidades
+                                e viso me tornar um desenvolvedor Full Stack.
+                            </p>
                         </article>
-
-                        <article style="border: var(--border-primary); border-top: none;">
-                            <h2 style="border-bottom: var(--border-primary);"><strong>Soft Skills</strong></h2>
-                            <dl>
-                                <dt>Responsabilidade</dt>
-                                <dt>Criatividade</dt>
-                                <dt>Resiliência</dt>
-                                <dt>Organização</dt>
-                                <dt>Autoaprendizagem</dt>
-                                <dt>Pensamento lógico</dt>
-                            </dl>
-                        </article>
-                    </section>
+                    </div>
 
                     <article style="border: var(--border-primary);">
                         <h2 style="border-bottom: var(--border-primary);"><strong>Formação</strong></h2>
@@ -122,12 +106,40 @@
                             <dd>Estudo contínuo de forma autônoma.</dd>
                         </dl>
                     </article>
+
+                    <section id="skills">
+                        <article style="border: var(--border-primary);">
+                            <h2 style="border-bottom: var(--border-primary);"><strong>Hard Skills</strong></h2>
+                            <div style="display: flex; justify-content: center;">
+                                <dl style="text-align: left; padding: 8px;">
+                                    <dt><strong>> Linguagens e Tecnologias:</strong></dt>
+                                    <dd>HTML, CSS, JavaScript, Python, Git, GitHub</dd>
+                                    <dt><strong>> Plataformas:</strong></dt>
+                                    <dd>AWS (EC2, S3, RDS, Lambda), Figma (básico)</dd>
+                                    <dt><strong>> Ferramentas:</strong></dt>
+                                    <dd>VSCode, Trello </dd>
+                                </dl>
+                            </div>
+                        </article>
+
+                        <article style="border: var(--border-primary); border-top: none;">
+                            <h2 style="border-bottom: var(--border-primary);"><strong>Soft Skills</strong></h2>
+                            <dl>
+                                <dt>Responsabilidade</dt>
+                                <dt>Criatividade</dt>
+                                <dt>Resiliência</dt>
+                                <dt>Organização</dt>
+                                <dt>Autoaprendizagem</dt>
+                                <dt>Pensamento lógico</dt>
+                            </dl>
+                        </article>
+                    </section>
                 </section>
             </section>
         </section>
 
         <section id="container-projects" class="full-screen">
-            <section id="content-projects">
+            <section id="content-projects" class="content">
                 <header style="display: flex; grid-column: 1 / span 5;" class="container-header">
                     <img class="container-header-img" src="./files/img-ram.png" alt="">
                     <strong>
@@ -147,12 +159,14 @@
                             </div>
                             <dl>
                                 <dt><strong>Mallow</strong> foi o jogo que desenvolvi durante o curso
-                                    <strong>PlayGame</strong>.</dt>
+                                    <strong>PlayGame</strong>.
+                                </dt>
                                 <dt>Fui o responsável por todo o processo de desenvolvimento desde o planejamento
                                     visual, mecânicas e narrativa até a implementação e programação na <strong>Unreal
                                         Engine</strong>.</dt>
                                 <dt>Este foi meu primeiro contato direto com lógica de programação, usando
-                                    <strong>Blueprints</strong>, o sistema visual da engine.</dt>
+                                    <strong>Blueprints</strong>, o sistema visual da engine.
+                                </dt>
                                 <dt>Por isso, além de criar a estética e a história do jogo, um dos maiores desafios foi
                                     justamente desenvolver as mecânicas e fazer tudo funcionar na prática.</dt>
                             </dl>
@@ -187,21 +201,32 @@
                                 </dt>
                             </dl>
                             <div style="width: 100%; display: flex; justify-content: space-evenly;">
-                                <a href="https://github.com/Equipe-DotTec/SAMA-API" target="_blank" class="one-link"><strong>SAMA - GitHub</strong></a>
-                                <a href="https://sama-api-bc5t.onrender.com/" target="_blank" class="one-link"><strong>SAMA - Site</strong></a>
+                                <a href="https://github.com/Equipe-DotTec/SAMA-API" target="_blank"
+                                    class="one-link"><strong>SAMA - GitHub</strong></a>
+                                <a href="https://sama-api-bc5t.onrender.com/" target="_blank"
+                                    class="one-link"><strong>SAMA - Site</strong></a>
                             </div>
                         </div>
                         <div class="pro-car-item">
                             <h2 style="margin-top: 20px;"><strong>RunRat</strong></h2>
                             <div class="img-container">
-                                <a href="https://scratch.mit.edu/projects/992210635" target="_blank" class="one-link" style="display: flex; justify-content: center;align-items: center;"><img src="./files/RunRat.jpeg" alt="Imagem ilustrativa do jogo RunRat"></a>
+                                <a href="https://scratch.mit.edu/projects/992210635" target="_blank" class="one-link"
+                                    style="display: flex; justify-content: center;align-items: center;"><img
+                                        src="./files/RunRat.jpeg" alt="Imagem ilustrativa do jogo RunRat"></a>
                             </div>
                             <dl>
-                                <dt><strong>RunRat</strong> é um jogo que criei no <strong>Scratch</strong> onde o jogador controla um rato tentando escapar de vários gatos em um espaço limitado.</dt>
-                                <dt>Desenvolvi o jogo como um passatempo, com o objetivo de treinar minha lógica de programação com blocos.</dt>
-                                <dt>O maior desafio foi ajustar as mecânicas de movimentação e colisão para que o rato e os gatos se não atravessassem as paredes, para manter o jogo <strong>desafiador</strong>.</dt>
+                                <dt><strong>RunRat</strong> é um jogo que criei no <strong>Scratch</strong> onde o
+                                    jogador controla um rato tentando escapar de vários gatos em um espaço limitado.
+                                </dt>
+                                <dt>Desenvolvi o jogo como um passatempo, com o objetivo de treinar minha lógica de
+                                    programação com blocos.</dt>
+                                <dt>O maior desafio foi ajustar as mecânicas de movimentação e colisão para que o rato e
+                                    os gatos se não atravessassem as paredes, para manter o jogo
+                                    <strong>desafiador</strong>.
+                                </dt>
                             </dl>
-                            <a href="https://scratch.mit.edu/projects/992210635" target="_blank" class="one-link"><strong>RunRat - Scratch</strong></a>
+                            <a href="https://scratch.mit.edu/projects/992210635" target="_blank"
+                                class="one-link"><strong>RunRat - Scratch</strong></a>
                         </div>
 
 
@@ -216,7 +241,7 @@
         </section>
 
         <section id="container-certificates" class="full-screen">
-            <section id="content-certificates">
+            <section id="content-certificates" class="content">
                 <header style="display: flex; grid-column: 1 / span 5;" class="container-header">
                     <img class="container-header-img" src="./files/img-hdd.png" alt="">
 
@@ -227,7 +252,8 @@
 
                     <div>
                         <h2><strong>PlayGame - SAGA</strong></h2>
-                        <article class="certificates-container-img" style="display: flex; justify-content: center;" data-id="0">
+                        <article class="certificates-container-img" style="display: flex; justify-content: center;"
+                            data-id="0">
                             <img style="width: auto; height: 100%;" src="./files/Certificados/SagaCertificado.jpeg"
                                 alt="certificado saga">
                         </article>
@@ -250,22 +276,29 @@
 
                     <div>
                         <h2><strong>REDASP</strong></h2>
-                        <article class="certificates-container-img" style="display: flex; justify-content: center;" data-id="3">
-                            <img style="width: auto; height: 100%;" src="./files/Certificados/BronzeRedasp.jpeg" alt="certificado medalha bronze Redasp">
+                        <article class="certificates-container-img" style="display: flex; justify-content: center;"
+                            data-id="3">
+                            <img style="width: auto; height: 100%;" src="./files/Certificados/BronzeRedasp.jpeg"
+                                alt="certificado medalha bronze Redasp">
                         </article>
                     </div>
 
                     <div>
-                        <h2><strong>CUCO</strong></h2>
-                        <article class="certificates-container-img" style="display: flex; justify-content: center;" data-id="4">
-                            <img style="width: auto; height: 100%;" src="./files/Certificados/CUCO.jpeg" alt="certificado menção honrosa CUCO">
+                        <h2><strong>GIT</strong></h2>
+                        <article class="certificates-container-img" style="display: flex; justify-content: center;"
+                            data-id="4">
+                            <img style="width: auto; height: 100%;" src="./files/Certificados/certificadogit.png"
+                                alt="certificado git/github">
                         </article>
                     </div>
 
                     <div>
                         <h2><strong>AWS</strong></h2>
-                        <article class="certificates-container-img" style="display: flex; justify-content: center;" data-id="5">
-                            <img style="width: auto; height: 100%;" src="./files/Certificados/AWS_course_certificate.jpeg" alt="certificado services overview AWS">
+                        <article class="certificates-container-img" style="display: flex; justify-content: center;"
+                            data-id="5">
+                            <img style="width: auto; height: 100%;"
+                                src="./files/Certificados/AWS_course_certificate.jpeg"
+                                alt="certificado services overview AWS">
                         </article>
                     </div>
                 </section>
@@ -273,60 +306,48 @@
         </section>
 
         <section id="modal-certificates">
-            <section id="modal-certificates-content">
-                <button class="btn-prev" id="cert-car-prev"><img src="./files/seta-esquerda.png"
+            <button class="btn-prev" id="cert-car-prev"><img src="./files/seta-esquerda.png"
                     alt="seta apontada para a esquerda"></button>
+            <section id="modal-certificates-content">
                 <div id="modal-certificates-body">
                     <section id="certificates-carousel">
                         <article class="cert-car-item" data-id="0">
                             <h2><strong>PlayGame - SAGA</strong></h2>
-                            <article style="display: flex; justify-content: center; max-width: 90vw; max-height: 90vh;">
-                                <img style="width: 100%; height: auto;" src="./files/Certificados/SagaCertificado.jpeg"
-                                    alt="certificado saga">
-                            </article>
+                            <img src="./files/Certificados/SagaCertificado.jpeg" alt="certificado saga">
                         </article>
 
                         <article class="cert-car-item" data-id="1">
                             <h2><strong>Operador de Microcomputador</strong></h2>
-                            <article style="display: flex; justify-content: center; max-width: 90vw; max-height: 90vh;">
-                                <img style="width: 100%; height: auto;" src="./files/Certificados/CertificadoOperadorDeMicrocomputador.png"
-                                    alt="certificado operador de Microcomputador">
-                            </article>
+                            <img src="./files/Certificados/CertificadoOperadorDeMicrocomputador.png"
+                                alt="certificado operador de Microcomputador">
                         </article>
 
                         <article class="cert-car-item" data-id="2">
                             <h2><strong>Alura</strong></h2>
-                            <article style="display: flex; justify-content: center; max-width: 90vw; max-height: 90vh;">
-                                <img style="width: 100%; height: auto;" src="./files/Certificados/AluraCertificados.jpeg" alt="certificados alura">
-                            </article>
+                            <img src="./files/Certificados/AluraCertificados.jpeg" alt="certificados alura">
                         </article>
 
                         <article class="cert-car-item" data-id="3">
                             <h2><strong>Redasp</strong></h2>
-                            <article style="display: flex; justify-content: center; max-width: 90vw; max-height: 90vh;">
-                                <img style="width: 100%; height: auto;" style="height: 80vh;" src="./files/Certificados/BronzeRedasp.jpeg" alt="certificado medalha bronze Redasp">
-                            </article>
+                            <img src="./files/Certificados/BronzeRedasp.jpeg" alt="certificado medalha bronze Redasp">
                         </article>
 
                         <article class="cert-car-item" data-id="4">
-                            <h2><strong>CUCO</strong></h2>
-                            <article style="display: flex; justify-content: center; max-width: 90vw; max-height: 90vh;">
-                                <img style="width: 100%; height: auto;" src="./files/Certificados/CUCO.jpeg" alt="certificado menção honrosa CUCO">
-                            </article>
+                            <h2><strong>Git</strong></h2>
+                            <img src="./files/Certificados/certificadogit.png" alt="certificado git/github">
                         </article>
 
                         <article class="cert-car-item" data-id="5">
                             <h2><strong>AWS</strong></h2>
-                            <article style="display: flex; justify-content: center; max-width: 90vw; max-height: 90vh;">
-                                <img style="width: 100%; height: auto;" src="./files/Certificados/AWS_course_certificate.jpeg" alt="certificado services overview AWS">
-                            </article>
+                            <img src="./files/Certificados/AWS_course_certificate.jpeg"
+                                alt="certificado services overview AWS">
                         </article>
 
                     </section>
                 </div>
-                <button class="btn-next" id="cert-car-next"><img src="./files/seta-direita.png"
-                    alt="seta apontada para a direita"></button>
             </section>
+            <button class="btn-next" id="cert-car-next"><img src="./files/seta-direita.png"
+                    alt="seta apontada para a direita"></button>
         </section>
 
         <footer>
@@ -336,12 +357,14 @@
             </article>
 
             <article class="link-box">
-                <a href="https://www.linkedin.com/in/kauan-domingues-3b00a5276" target="_blank" class="one-link"><strong>Linkedin</strong></a>
+                <a href="https://www.linkedin.com/in/kauan-domingues-3b00a5276" target="_blank"
+                    class="one-link"><strong>Linkedin</strong></a>
                 <a id="link-linkedin" target="_blank" href="https://www.linkedin.com/in/kauan-domingues-3b00a5276"></a>
             </article>
 
             <article class="link-box">
-                <a href="mailto:kauandomingues931@gmail.com" target="_blank" class="one-link"><strong>kauandomingues931@gmail.com</strong></a>
+                <a href="mailto:kauandomingues931@gmail.com" target="_blank"
+                    class="one-link"><strong>kauandomingues931@gmail.com</strong></a>
                 <a id="link-mail" target="_blank" href="mailto:kauandomingues931@gmail.com"></a>
             </article>
 

@@ -1,0 +1,85 @@
+:root {
+    --color-primary: #cacaca;
+    --color-secondary: #40B6D7;
+    --bgdark: #17181b;
+    --border-primary: 2px solid var(--color-secondary);
+}
+
+/* Section - Container Projects */
+
+#container-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#content-projects {
+    width: 97%;
+    justify-self: center;
+    border: var(--border-primary);
+    height: 95vh;
+    overflow: hidden;
+    box-shadow: 0 0 30px 3px #020202;
+    background: linear-gradient(to top, #111114, #1111148c);
+}
+
+#projects-body {
+    height: 89%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#projects-carousel {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-container {
+    margin-top: 10px;
+    align-self: center;
+    max-height: 250px;
+    max-width: 700px;
+    border-radius: 20px;
+    border: var(--border-primary);
+    overflow: hidden;
+}
+
+.pro-car-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.pro-car-item dl {
+    margin: 20px;
+    max-width: 700px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.pro-car-item dd {
+    margin-left: 20px;
+}
+
+.pro-car-item {
+    margin-bottom: 10px;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.pro-car-item ::-webkit-scrollbar {
+    display: none;
+}
+
+.pro-car-item.active {
+    display: block;
+}
