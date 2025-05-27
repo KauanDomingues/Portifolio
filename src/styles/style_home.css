@@ -1,16 +1,25 @@
 :root {
     --color-primary: #cacaca;
-    --color-secondary: #40B6D7;
-    --bgdark: #17181b;
-    --border-primary: 2px solid var(--color-secondary);
+    --color-secondary: #96d7e9;
+    --color-secondary-filter: brightness(0) saturate(100%) invert(64%) sepia(9%) saturate(2090%) hue-rotate(145deg) brightness(110%) contrast(90%);
+    --bgdark: #111114;
+    --border-primary: 3px solid var(--color-secondary);
 }
+
+/* :root {
+    --color-primary: #cacaca;
+    --color-secondary: #ffc401;
+    --color-secondary-filter: brightness(0) saturate(100%) invert(64%) sepia(9%) saturate(2700%) hue-rotate(10deg) brightness(120%) contrast(95%);
+    --bgdark: #111114;
+    --border-primary: 3px solid var(--color-secondary);
+} */
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #111114;
+    background-color: #2a2f31;
     text-align: center;
     font-family: 'VT323', monospace;
     font-size: 20px;
@@ -31,10 +40,15 @@ body * {
   height: 150px;
   pointer-events: none;
   border-radius: 50%;
-  background: #40b6d7b7;
+  background: var(--color-secondary);
   filter: blur(40px);
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+
+.img-color {
+    filter: var(--color-secondary-filter);
+;
 }
 
 strong {
@@ -76,11 +90,20 @@ strong {
     justify-content: center;
 }
 
+#my-name {
+    text-align: center;
+    margin: 30px;
+    font-size: 75px;
+    width: 300px;
+    z-index: 1; 
+    line-height: 0.48;
+}
+
 /* "Home" cpu screen */
 #container-cpu {
     height: 100vh;
     display: flex;
-    background: linear-gradient(to bottom, #111114, #1111143a);
+    background: linear-gradient(to bottom, var(--bgdark), #1111143a);
     justify-content: center;
 }
 
@@ -90,7 +113,7 @@ strong {
 }
 
 #cpu {
-    z-index: 2;
+    z-index: 1;
     background-image: url(../files/CPU.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -98,11 +121,10 @@ strong {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 195px;
-    height: 195px;
-    border-radius: 23px;
-    box-shadow: 0 0 15px 0 var(--bgdark);
-    padding: 19px;
+    width: 160.25px;
+    height: 160.25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 0 var(--color-secondary);
 }
 
 /* Common between containers fullscreen */
@@ -123,12 +145,6 @@ strong {
     margin: 0 10px;
 }
 
-.btn-x {
-    margin: 15px;
-    height: 30px;
-    width: 30px;
-}
-
 .content {
     box-shadow: 0 0 30px 3px var(--bgdark);
 }
@@ -145,6 +161,7 @@ strong {
 .btn-prev img,
 .btn-next img {
     opacity: 0.7;
+    transition: opacity 0.3s;
 }
 
 .btn-prev:hover img,
@@ -159,7 +176,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: linear-gradient(to top, #111114, #1111140e);
+    background: linear-gradient(to top, var(--bgdark), #1111140e);
 }
 
 
@@ -189,7 +206,7 @@ footer {
 }
 
 .one-link:hover {
-    color: #85ddf5;
+    color: var(--color-secondary);
     text-shadow: 0 0 3px var(--color-primary);
     padding: none;
 
@@ -198,8 +215,9 @@ footer {
 /* Footer Links */
 #link-linkedin {
     background-image: url(../files/logo-Linkedin.png);
-    width: 4em;
-    height: 4.07em;
+    filter: var(--color-secondary-filter);
+    width: 54px;
+    height: 55px;
     background-size: cover;
     transition: background-image 0.6s ease;
 }
@@ -210,8 +228,9 @@ footer {
 
 #link-mail {
     background-image: url(../files/logo-email.png);
-    height: 72px;
-    width: 88px;
+    filter: var(--color-secondary-filter);
+    height: 54px;
+    width: 66px;
     background-size: cover;
     transition: background-image 0.3s ease;
 }
@@ -222,8 +241,9 @@ footer {
 
 #link-github {
     background-image: url(../files/logo-github.png);
-    width: 72px;
-    height: 72px;
+    filter: var(--color-secondary-filter);
+    width: 54px;
+    height: 54px;
     background-size: cover;
     transition: background-image 0.2s ease;
 }
@@ -234,10 +254,11 @@ footer {
 
 .btn-save-cv {
     display: inline-block;
-    height: 70px;
-    width: 72px;
+    height: 52px;
+    width: 54px;
     background-size: cover;
     background-image: url(../files/icon-save.png);
+    filter: var(--color-secondary-filter);
     transition: background-image 0.3s ease;
 }
 

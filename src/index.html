@@ -27,7 +27,7 @@
             <div id="container-cpu-bg"><img style="width: 100%;" src="./files/cpu-buses.png"
                     alt="ilustração caminhos de cpu"></div>
             <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <h1 style="font-size: 50px; z-index: 2;">Kauan Domingues</h1>
+                <h1 id="my-name"><strong>Kauan Domingues</strong></h1>
                 <section id="cpu">
                     <nav id="main-nav" style="display: flex; flex-direction: column;">
                         <a class="one-link" href="#container-me">Sobre Mim</a>
@@ -41,7 +41,7 @@
         <section id="container-me" class="full-screen">
             <section id="content-me" class="content">
                 <header class="container-header">
-                    <img class="container-header-img" src="./files/img-rom.png" alt="">
+                    <img class="container-header-img img-color" src="./files/img-rom.png" alt="">
                     <h1 class="container-header-text">Sobre Mim</h1>
                 </header>
 
@@ -141,17 +141,16 @@
         <section id="container-projects" class="full-screen">
             <section id="content-projects" class="content">
                 <header style="display: flex; grid-column: 1 / span 5;" class="container-header">
-                    <img class="container-header-img" src="./files/img-ram.png" alt="">
+                    <img class="container-header-img img-color" src="./files/img-ram.png" alt="">
                     <strong>
                         <h1 class="container-header-text">Projetos</h1>
                     </strong>
                 </header>
 
                 <section id="projects-body">
-                    <button class="btn-prev" id="pro-car-prev"><img src="./files/seta-esquerda.png"
+                    <button class="btn-prev img-color" id="pro-car-prev"><img src="./files/seta-esquerda.png"
                             alt="seta apontada para a esquerda"></button>
                     <section id="projects-carousel">
-
                         <div class="pro-car-item active">
                             <h2 style="margin-top: 20px;"><strong>Mallow</strong></h2>
                             <div class="img-container">
@@ -162,12 +161,15 @@
                                     <strong>PlayGame</strong>.
                                 </dt>
                                 <dt>Fui o responsável por todo o processo de desenvolvimento desde o planejamento
-                                    visual, mecânicas e narrativa até a implementação e programação na <strong>Unreal
-                                        Engine</strong>.</dt>
+                                    visual, mecânicas e narrativa até a implementação e programação na
+                                    <strong>Unreal
+                                        Engine</strong>.
+                                </dt>
                                 <dt>Este foi meu primeiro contato direto com lógica de programação, usando
                                     <strong>Blueprints</strong>, o sistema visual da engine.
                                 </dt>
-                                <dt>Por isso, além de criar a estética e a história do jogo, um dos maiores desafios foi
+                                <dt>Por isso, além de criar a estética e a história do jogo, um dos maiores desafios
+                                    foi
                                     justamente desenvolver as mecânicas e fazer tudo funcionar na prática.</dt>
                             </dl>
                         </div>
@@ -177,27 +179,35 @@
                                 <img src="./files/sama.jpg" alt="Logo ilustrativa do projeto SAMA">
                             </div>
                             <dl>
-                                <dt>O <strong>SAMA</strong> – Sistema de Atestados Médicos e Avaliações foi o projeto
+                                <dt>O <strong>SAMA</strong> – Sistema de Atestados Médicos e Avaliações foi o
+                                    projeto
                                     que minha equipe, <a href="https://github.com/Equipe-DotTec" class="one-link"
-                                        target="_blank"><strong>.Tec</strong></a>, desenvolveu no primeiro semestre da
+                                        target="_blank"><strong>.Tec</strong></a>, desenvolveu no primeiro semestre
+                                    da
                                     faculdade de ADS.</dt>
                                 <dt>Usamos o framework Flask no backend e, no frontend, trabalhamos com JavaScript,
-                                    HTML, CSS e Bootstrap. Organizamos o time com base no <strong>método Scrum</strong>,
+                                    HTML, CSS e Bootstrap. Organizamos o time com base no <strong>método
+                                        Scrum</strong>,
                                     e eu atuei como desenvolvedor.</dt>
                                 <dt>Minhas principais responsabilidades foram:</dt>
                                 <dd><strong>></strong> Criar um dashboard com métricas de aprovação e reprovação de
                                     atestados, voltado para o controle da secretaria;</dd>
-                                <dd><strong>></strong> Implementar a identificação automática do motivo do afastamento,
+                                <dd><strong>></strong> Implementar a identificação automática do motivo do
+                                    afastamento,
                                     com base no código CID do atestado, usando a Google Charts para visualização dos
                                     dados;</dd>
-                                <dd><strong>></strong> Desenvolver a página de perfil do usuário, com funcionalidades
-                                    para editar dados pessoais, excluir a conta e visualizar as equipes das quais ele
+                                <dd><strong>></strong> Desenvolver a página de perfil do usuário, com
+                                    funcionalidades
+                                    para editar dados pessoais, excluir a conta e visualizar as equipes das quais
+                                    ele
                                     faz parte;</dd>
-                                <dt>Trabalhar no backend da área de Equipes Ágeis, responsável pelo envio das avaliações
+                                <dt>Trabalhar no backend da área de Equipes Ágeis, responsável pelo envio das
+                                    avaliações
                                     feitas com o método Pacer e pelo dashboard de desempenho da equipe.</dt>
                                 <dt>Foi meu primeiro projeto em equipe, e, por isso, rolaram alguns desafios na
                                     comunicação e organização. Mas conseguimos superar tudo e entregar um sistema
-                                    bonito, funcional e robusto, mesmo usando apenas arquivos .txt como banco de dados.
+                                    bonito, funcional e robusto, mesmo usando apenas arquivos .txt como banco de
+                                    dados.
                                 </dt>
                             </dl>
                             <div style="width: 100%; display: flex; justify-content: space-evenly;">
@@ -220,7 +230,8 @@
                                 </dt>
                                 <dt>Desenvolvi o jogo como um passatempo, com o objetivo de treinar minha lógica de
                                     programação com blocos.</dt>
-                                <dt>O maior desafio foi ajustar as mecânicas de movimentação e colisão para que o rato e
+                                <dt>O maior desafio foi ajustar as mecânicas de movimentação e colisão para que o
+                                    rato e
                                     os gatos se não atravessassem as paredes, para manter o jogo
                                     <strong>desafiador</strong>.
                                 </dt>
@@ -231,7 +242,7 @@
 
 
                     </section>
-                    <button class="btn-next" id="pro-car-next"><img src="./files/seta-direita.png"
+                    <button class="btn-next img-color" id="pro-car-next"><img src="./files/seta-direita.png"
                             alt="seta apontada para a direita"></button>
 
                 </section>
@@ -243,7 +254,7 @@
         <section id="container-certificates" class="full-screen">
             <section id="content-certificates" class="content">
                 <header style="display: flex; grid-column: 1 / span 5;" class="container-header">
-                    <img class="container-header-img" src="./files/img-hdd.png" alt="">
+                    <img class="container-header-img img-color" src="./files/img-hdd.png" alt="">
 
                     <h1 class="container-header-text">Certificados</h1>
                 </header>
@@ -251,7 +262,7 @@
                 <section id="certificates-body">
 
                     <div>
-                        <h2><strong>PlayGame - SAGA</strong></h2>
+                        <h2><strong>PlayGame</strong></h2>
                         <article class="certificates-container-img" style="display: flex; justify-content: center;"
                             data-id="0">
                             <img style="width: auto; height: 100%;" src="./files/Certificados/SagaCertificado.jpeg"
@@ -260,7 +271,7 @@
                     </div>
 
                     <div>
-                        <h2><strong>Operador de Microcomputador</strong></h2>
+                        <h2><strong>Microcomputador</strong></h2>
                         <article class="certificates-container-img" data-id="1">
                             <img src="./files/Certificados/CertificadoOperadorDeMicrocomputador.png"
                                 alt="certificado operador de Microcomputador">
@@ -306,38 +317,38 @@
         </section>
 
         <section id="modal-certificates">
-            <button class="btn-prev" id="cert-car-prev"><img src="./files/seta-esquerda.png"
+            <button class="btn-prev img-color" id="cert-car-prev"><img src="./files/seta-esquerda.png"
                     alt="seta apontada para a esquerda"></button>
             <section id="modal-certificates-content">
                 <div id="modal-certificates-body">
                     <section id="certificates-carousel">
-                        <article class="cert-car-item" data-id="0">
+                        <article class="cert-car-item">
                             <h2><strong>PlayGame - SAGA</strong></h2>
                             <img src="./files/Certificados/SagaCertificado.jpeg" alt="certificado saga">
                         </article>
 
-                        <article class="cert-car-item" data-id="1">
+                        <article class="cert-car-item">
                             <h2><strong>Operador de Microcomputador</strong></h2>
                             <img src="./files/Certificados/CertificadoOperadorDeMicrocomputador.png"
                                 alt="certificado operador de Microcomputador">
                         </article>
 
-                        <article class="cert-car-item" data-id="2">
+                        <article class="cert-car-item">
                             <h2><strong>Alura</strong></h2>
                             <img src="./files/Certificados/AluraCertificados.jpeg" alt="certificados alura">
                         </article>
 
-                        <article class="cert-car-item" data-id="3">
+                        <article class="cert-car-item">
                             <h2><strong>Redasp</strong></h2>
                             <img src="./files/Certificados/BronzeRedasp.jpeg" alt="certificado medalha bronze Redasp">
                         </article>
 
-                        <article class="cert-car-item" data-id="4">
+                        <article class="cert-car-item">
                             <h2><strong>Git</strong></h2>
                             <img src="./files/Certificados/certificadogit.png" alt="certificado git/github">
                         </article>
 
-                        <article class="cert-car-item" data-id="5">
+                        <article class="cert-car-item">
                             <h2><strong>AWS</strong></h2>
                             <img src="./files/Certificados/AWS_course_certificate.jpeg"
                                 alt="certificado services overview AWS">
@@ -346,7 +357,7 @@
                     </section>
                 </div>
             </section>
-            <button class="btn-next" id="cert-car-next"><img src="./files/seta-direita.png"
+            <button class="btn-next img-color" id="cert-car-next"><img src="./files/seta-direita.png"
                     alt="seta apontada para a direita"></button>
         </section>
 

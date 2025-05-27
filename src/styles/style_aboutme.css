@@ -1,10 +1,3 @@
-:root {
-    --color-primary: #cacaca;
-    --color-secondary: #40B6D7;
-    --bgdark: #17181b;
-    --border-primary: 2px solid var(--color-secondary);
-}
-
 /* Section - container about me */
 
 #container-me {
@@ -20,6 +13,8 @@
     justify-self: center;
     border: var(--border-primary);
     overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     flex-direction: column;
     box-shadow: 0 0 30px 3px #020202;
     background: linear-gradient(to top, #111114, #1111148c);

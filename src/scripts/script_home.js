@@ -16,35 +16,36 @@ document.addEventListener('DOMContentLoaded', () => {
         proCarItems[proCarCurrent].classList.remove('active');
         proCarCurrent = (proCarCurrent + 1) % proCarItems.length;
         proCarItems[proCarCurrent].classList.add('active');
-    })
+    });
 
     document.getElementById('pro-car-prev').addEventListener('click', function(){
         proCarItems[proCarCurrent].classList.remove('active');
         proCarCurrent = (proCarCurrent - 1 + proCarItems.length) % proCarItems.length;
         proCarItems[proCarCurrent].classList.add('active');
-    })
+    });
 
 
     
     // Carrossel certificados
     const certCarItems = document.querySelectorAll('.cert-car-item');
-    let certCarCurrent = 0;
 
-    document.getElementById('cert-car-next').addEventListener('click', function() {
-        for (var idn = 0; idn < certCarItems.length; idn++) {
-            certCarItems[idn].classList.remove('active');
-        };
-        certCarCurrent = (certCarCurrent + 1) % certCarItems.length;
-        certCarItems[certCarCurrent].classList.add('active');
-    })
+    function activeCertBtns(certCarCurrent){
+        document.getElementById('cert-car-next').addEventListener('click', function() {
+            for (var id = 0; id < certCarItems.length; id++) {
+                certCarItems[id].classList.remove('active');
+            };
+            certCarCurrent = (certCarCurrent + 1) % certCarItems.length;
+            certCarItems[certCarCurrent].classList.add('active');
+        });
 
-    document.getElementById('cert-car-prev').addEventListener('click', function(){
-        for (var idn = 0; idn < certCarItems.length; idn++) {
-            certCarItems[idn].classList.remove('active');
-        };
-        certCarCurrent = (certCarCurrent - 1 + certCarItems.length) % certCarItems.length;
-        certCarItems[certCarCurrent].classList.add('active');
-    })
+        document.getElementById('cert-car-prev').addEventListener('click', function(){
+            for (var id = 0; id < certCarItems.length; id++) {
+                certCarItems[id].classList.remove('active');
+            };
+            certCarCurrent = (certCarCurrent - 1 + certCarItems.length) % certCarItems.length;
+            certCarItems[certCarCurrent].classList.add('active');
+        });
+    };
 
     // Modal
     const modalCert = document.getElementById('modal-certificates');
@@ -52,17 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.certificates-container-img').forEach(elemento => {
         elemento.addEventListener('click', (event) => {
+
+            // Remove 'active' class from all the items
             for (var idn = 0; idn < certCarItems.length; idn++) {
                 certCarItems[idn].classList.remove('active');
             };
+
             modalCert.style.display = 'flex';
             document.body.style.overflow = 'hidden';
             const id = event.currentTarget.dataset.id;
-            console.log(id)
+            activeCertBtns(id);
             certCarItems[id].classList.add('active');
         });
     });
 
+    // Close the modal
     modalCert.addEventListener('click', function (e) {
     if (e.target == modalCert && e.target != modalCertContent) {
         document.body.style.overflow = '';

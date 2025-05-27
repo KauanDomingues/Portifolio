@@ -1,11 +1,3 @@
-:root {
-    --color-primary: #cacaca;
-    --color-secondary: #40B6D7;
-    --bgdark: #17181b;
-    --border-primary: 2px solid var(--color-secondary);
-}
-
-
 /* Section - Container Certificates */
 
 #container-certificates {
@@ -21,8 +13,8 @@
     border: var(--border-primary);
     height: 95vh;
     overflow-y: auto;    
-    box-shadow: 0 0 30px 3px #020202;
-    background: linear-gradient(to top, #111114, #1111148c);
+    box-shadow: 0 0 30px 3px var(--bgdark);
+    background: linear-gradient(to top, var(--bgdark), #1111148c);
 
 }
 
@@ -50,6 +42,8 @@
 }
 
 .certificates-container-img:hover {
+    height: 245px;
+    width: 295px;
     filter: brightness(0.8);
     box-shadow: 0 0 15px 1px var(--color-secondary);
     cursor: pointer;
@@ -63,6 +57,7 @@
 }
 
 #modal-certificates {
+    z-index: 2;
     height: 100vh;
     width: 100vw;
     display: none;
@@ -82,31 +77,50 @@
 }
 
 #certificates-carousel img{
-    width: 100%;
+    justify-self: center;
+    width: 95%;
     max-width: 900px;
     height: auto;
     max-height: 80vh;
+    box-shadow: 0 0 15px 1px var(--color-secondary);
+}
+
+#certificates-carousel {
+    width: 900px;
+    max-width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .cert-car-item {
+    max-width: 85vw;
     margin-bottom: 10px;
-    height: 100%;
-    display: none;
+    align-self: center;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    align-items: center;
+    scale: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: absolute;
 }
 
 .cert-car-item.active {
-    display: flex;
+    scale: 1;
+    opacity: 1;
 }
 
 @media (max-width: 1075px) {
     .certificates-container-img {
         height: 150px;
         width: 200px;
+    }
+    .certificates-container-img:hover {
+        height: 145px;
+        width: 195px;
     }
 }
 
@@ -119,5 +133,9 @@
     .certificates-container-img {
         height: 100px;
         width: 150px;
+    }    
+    .certificates-container-img:hover {
+        height: 95px;
+        width: 145px;
     }
 }
