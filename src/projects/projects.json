@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "SAMA",
-            "imgPath": "./files/sama.jpg",
+            "imgPath": "./src/files/sama.jpg",
             "description": "Aplicação Web para gerenciamento de atestados médicos e equipes Scrum, dashboards para controle.",
             "tags": [
                 "Python",
@@ -18,7 +18,7 @@
         },
         {
             "name": "PDI",
-            "imgPath": "./files/pdi.png",
+            "imgPath": "./src/files/pdi.png",
             "description": "Aplicação Desktop para gerenciamento de Planos de Desenvolvimento Individual, dashboards para tomada de decisão.",
             "tags": [
                 "Java",
@@ -33,7 +33,7 @@
         },
         {
             "name": "Mães que oram pelos filhos",
-            "imgPath": "./files/grupoDeOracao.png",
+            "imgPath": "./src/files/grupoDeOracao.png",
             "description": "Aplicação Desktop para gerenciamento de encontros e serviços de um grupo de oração",
             "tags": [
                 "Java",
@@ -47,7 +47,7 @@
         },
         {
             "name": "Mallow",
-            "imgPath": "./files/Mallow.gif",
+            "imgPath": "./src/files/Mallow.gif",
             "description": "Jogo 2D de plataforma",
             "tags": [
                 "Unreal Engine",

@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //Read projects.json and add card to html
-    fetch("./projects/projects.json").then(res => res.json().then(data => {
+    fetch("./src/projects/projects.json").then(res => res.json().then(data => {
         data.projects.forEach(project => {
             let card = buildProjectCard(project.imgPath, project.name, project.description, project.tags, project.links);
             document.getElementById("projects-cards-section").innerHTML += card;

@@ -44,8 +44,9 @@
 #over-mouse-glow {
   width: 35px;
   height: 35px;
-  z-index: 0;
+  z-index: 4;
   background-color: var(--light-color-primary);
+  filter: blur(25px);
 }
 
 #pointer {
