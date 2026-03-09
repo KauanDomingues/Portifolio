@@ -1,0 +1,42 @@
+:root {
+    --light-text: #ffffff;
+    --text-color: #d2d6d6;
+    --light-color-primary: #96d7e9;
+    --color-primary: #66a8ba;
+    --light-color-primary-filter: brightness(0) saturate(100%) invert(85%) sepia(9%) saturate(1500%) hue-rotate(145deg) brightness(110%) contrast(90%);
+    --bg-img: url(../files/dark-hex.png);
+    --bg: #22262f;
+    --bg-dark: #1d222c;
+    --bglight: #313641;
+}
+
+.light-mode {
+    --light-text: #000000;
+    --text-color: #3e3e3e;
+    --bg-img: url(../files/light-hex.png);
+    --bg: #f5f5f5;
+    --bg-dark: #e2e7f1;
+    --bglight: #ffffff;
+    --light-color-primary-filter: brightness(60%) saturate(100%) invert(95%) sepia(9%) saturate(1500%) hue-rotate(145deg) brightness(110%) contrast(90%);
+    --light-color-primary: #69d2ce;
+    --color-primary: #49a09f;
+}
+
+.light-mode #rubik-cube {
+    content: url(../files/light-kcube.png);
+}
+
+#theme-button {
+    transition: all 0.4s ease;
+    width: 25px;
+    height: 25px;
+    margin: 14px 0;
+}
+
+#theme-button:hover {
+    scale: 1.1;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}

@@ -1,51 +1,21 @@
-/* Section - container about me */
-
-#container-me {
+/*About me*/
+#about-me {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    width: 55%;
 }
 
-#content-me {
-    height: 95vh;
-    width: 97%;
-    justify-self: center;
-    border: var(--border-primary);
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    flex-direction: column;
-    box-shadow: 0 0 30px 3px #020202;
-    background: linear-gradient(to top, #111114, #1111148c);
+#about-me>div>header {
+    margin: 1em;
 }
 
-#me-body {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
+#about-me>div>article p {
+    margin: 13px 15px;
 }
 
-#me-body>* {
-    margin: 20px;
-}
-
-#formation-list {
-    text-align: left;
-    line-height: 1.1;
-}
-
-#formation-list dd {
-    margin-left: 25px;
-}
-
-@media (max-width: 1270px) {
-    #me-body {
-        flex-direction: column;
-    }
-
-    #skills {
-        width: 95%;
+@media (max-width: 900px){
+    #about-me {
+        width: 80%;
     }
 }

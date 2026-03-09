@@ -1,0 +1,59 @@
+{
+    "projects": [
+        {
+            "name": "SAMA",
+            "imgPath": "./files/sama.jpg",
+            "description": "Aplicação Web para gerenciamento de atestados médicos e equipes Scrum, dashboards para controle.",
+            "tags": [
+                "Python",
+                "HTML/CSS",
+                "JavaScript",
+                "Flask",
+                "JQuery"
+            ],
+            "links": {
+                "GitHub": "https://github.com/Equipe-DotTec/SAMA-API",
+                "Demo": "https://sama-api-bc5t.onrender.com/"
+            }
+        },
+        {
+            "name": "PDI",
+            "imgPath": "./files/pdi.png",
+            "description": "Aplicação Desktop para gerenciamento de Planos de Desenvolvimento Individual, dashboards para tomada de decisão.",
+            "tags": [
+                "Java",
+                "JavaFx",
+                "Maven",
+                "MySQL",
+                "Figma"
+            ],
+            "links": {
+                "GitHub": "https://github.com/dottecteam/PDI"
+            }
+        },
+        {
+            "name": "Mães que oram pelos filhos",
+            "imgPath": "./files/grupoDeOracao.png",
+            "description": "Aplicação Desktop para gerenciamento de encontros e serviços de um grupo de oração",
+            "tags": [
+                "Java",
+                "JavaFx",
+                "Maven",
+                "MySQL"
+            ],
+            "links": {
+                "GitHub": "https://github.com/KauanDomingues/ProjetoEncontros"
+            }
+        },
+        {
+            "name": "Mallow",
+            "imgPath": "./files/Mallow.gif",
+            "description": "Jogo 2D de plataforma",
+            "tags": [
+                "Unreal Engine",
+                "Illustrator"
+            ],
+            "links": {}
+        }
+    ]
+}

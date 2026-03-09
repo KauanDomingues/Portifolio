@@ -1,0 +1,17 @@
+/* Footer - Contacts */
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--bg-dark);
+    min-height: 15vh;
+    width: 100%;
+
+}
+
+@media (max-width: 900px) {
+    #footer {
+        min-height: 25vh;
+    }
+}

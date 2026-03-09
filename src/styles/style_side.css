@@ -1,0 +1,90 @@
+#side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50px;
+    height: 100%;
+    left: 0;
+    position: fixed;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-dark);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+#buttons:hover {
+    opacity: 1;
+}
+
+
+.link-linkedin {
+    background-image: url(../files/logo-Linkedin.png);
+    filter: var(--light-color-primary-filter);
+    transition: background-image 0.6s ease;
+}
+
+.link-linkedin:hover {
+    background-image: url(../files/logo-linkedin-filled.png);
+}
+
+.link-mail {
+    background-image: url(../files/logo-email.png);
+    filter: var(--light-color-primary-filter);
+    transition: background-image 0.3s ease;
+}
+
+.link-mail:hover {
+    background-image: url(../files/logo-email-filled.png);
+}
+
+.link-github {
+    background-image: url(../files/logo-github.png);
+    filter: var(--light-color-primary-filter);
+}
+
+.link-github:hover {
+    background-image: url(../files/logo-github-filled.png);
+}
+
+.btn-save-cv {
+    background-image: url(../files/icon-save.png);
+    filter: var(--light-color-primary-filter);
+}
+
+.btn-save-cv:hover {
+    background-image: url(../files/icon-save-filled.png);
+}
+
+.link-box {
+    width: 25px;
+    height: 25px;
+    margin: 10px 10px;
+    background-size: 100% 100%;
+    transition: all 0.4s ease;
+}
+
+.link-box:hover {
+    scale: 1.2;
+}
+
+
+@media (max-width: 900px) {
+    #side {
+        flex-direction: row;
+        height: 50px;
+        width: 100%;
+        bottom: 0;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #buttons {
+        flex-direction: row;
+    }
+}

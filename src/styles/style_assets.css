@@ -1,0 +1,68 @@
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bgligth);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Mouse */
+* {
+  cursor: none;
+}
+
+#mouse-glow,
+#over-mouse-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  background: var(--color-primary);
+  filter: blur(40px);
+  transform: translate(-50%, -50%);
+}
+
+#mouse-glow {
+  width: 100px;
+  height: 100px;
+  z-index: -1;
+}
+
+#over-mouse-glow {
+  width: 35px;
+  height: 35px;
+  z-index: 0;
+  background-color: var(--light-color-primary);
+}
+
+#pointer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  background-image: url(../files/pointer.png);
+  background-size: 100% 90%;
+  background-repeat: no-repeat;
+  filter: var(--light-color-primary-filter);
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  cursor: url(../files/mouseMiddleFInger.png);
+}

@@ -1,0 +1,73 @@
+/*Tech Stack*/
+#tech-stack {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#tech-stack-list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+}
+
+#tech-stack-list li {
+    background-color: var(--bglight);
+    border-radius: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: solid 1px transparent;
+    transition: all 0.5s ease;
+    padding: 0 10px;
+}
+
+#tech-stack-list li:hover {
+    color: var(--light-color-primary);
+    border: solid 1px var(--light-color-primary);
+}
+
+.tech-stack-logo {
+    height: 3em;
+    width: 3em;
+    margin: 0 8px 0 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+}
+
+#tech-stack-list li #python-logo {
+    background-image: url(../files/white-python-logo.png);
+}
+
+#tech-stack-list li #javascript-logo {
+    background-image: url(../files/white-javascript-logo.png);
+}
+
+#tech-stack-list li #aws-logo {
+    background-image: url(../files/white-aws-logo.png);
+}
+
+#tech-stack-list li #figma-logo {
+    background-image: url(../files/white-figma-logo.png);
+}
+
+#tech-stack-list li:hover div {
+    filter: var(--light-color-primary-filter);
+}
+
+@media (max-width: 900px){
+    .tech-stack-logo {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    #tech-stack-list li h4 {
+        font-size: 14px;
+    }
+}
+
+
+

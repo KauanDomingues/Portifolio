@@ -1,78 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kauan Domingues - Portifolio</title>
+    <link rel="icon" type="image/x-icon" href="./files/kcube.png">
+
+    <link rel="stylesheet" href="./styles/style_color.css">
+
     <link rel="stylesheet" href="./styles/style_home.css">
+    <link rel="stylesheet" href="./styles/style_assets.css">
+    <link rel="stylesheet" href="./styles/style_aboutme.css">
+    <link rel="stylesheet" href="./styles/style_techstack.css">
+    <link rel="stylesheet" href="./styles/style_projects.css">
+    <link rel="stylesheet" href="./styles/style_education.css">
+    <link rel="stylesheet" href="./styles/style_side.css">
+    <link rel="stylesheet" href="./styles/style_footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <script defer src="./scripts/script_home.js"></script>
 </head>
+
 <body>
+    <div id="mouse-glow"></div>
+    <div id="over-mouse-glow"></div>
+    <div id="pointer"></div>
 
     <header id="header">
-        <h1 style="color: var(--light-text);">Kauan Domingues</h1>
+        <div style="display: flex; justify-content: center;">
+            <img id="minilogo" src="./files/kcube.png" alt="k shaped cube">
+            <h1 id="kdHeaderText" class="active">Kauan
+                Domingues</h1>
+        </div>
 
         <nav id="nav-bar">
-            <li id="nav-list">
-                <ul><button class="nav-button">Sobre Mim</button></ul>
-                <ul><button class="nav-button">Projects</button></ul>
-                <ul><button class="nav-button">Certificates</button></ul>
-                <ul><button class="nav-button">Contact Me</button></ul>
-            </li>
+            <img id="menu-selection" src="./files/menu-selection.png" alt="menu">
+            <ul id="nav-list" style="list-style: none;">
+                <li><button id="about-me-button" class="nav-button">Sobre Mim</button></li>
+                <li><button id="tech-stack-button" class="nav-button">Tecnologias</button></li>
+                <li><button id="projects-button" class="nav-button">Projetos</button></li>
+                <li><button id="education-button" class="nav-button">Formação</button></li>
+            </ul>
         </nav>
     </header>
 
-    <section id="presentation">
-        <div>
-            <img src="./files/kcube.png" alt="Rubik's cube with 'k' patterned colors">
-            <div>
-                <h1 style="color: var(--light-text);">
-                    Bom dia! Meu nome é <span class="highlight-text">Kauan Domingues</span>
-                </h1>
-                <article id="presentation-text">
-                    <p style="font-size: 20px; margin-bottom: 10px;">
-                        Desenvolvedor apaixonado por lógica algorítmica.
-                    </p>
-                    <p>
-                        Foco em excelência e entrega de valor. Gosto de entender problemas e criar soluções.
-                    </p>
-                </article>
-            </div>
+    <section id="side">
+        <div id="buttons">
+            <button id="themeButton"><img id="theme-button" src="./files/theme-button.png" alt="Theme"></button>
+            <a class="btn-save-cv link-box" href="./files/CurriculoKauanDomingues.pdf" download class="btn-save-cv"></a>
+            <a class="link-linkedin link-box" target="_blank" href="https://www.linkedin.com/in/kauandomingues"></a>
+            <a class="link-mail link-box" target="_blank" href="mailto:kauandomingues931@gmail.com"></a>
+            <a class="link-github link-box" target="_blank" href="https://github.com/KauanDomingues"></a>
         </div>
     </section>
 
-    <section id="about-me">
-        <div>
+
+    <section id="container">
+
+        <section id="presentation" class="portfolio-section">
+            <div>
+                <img id="rubik-cube" src="./files/kcube.png" alt="Rubik's cube with 'k d' patterned colors">
+                <div>
+                    <h1 style="color: var(--light-text);">
+                        Bom dia! Meu nome é <span class="highlight-text">Kauan Domingues</span>
+                    </h1>
+                    <article id="presentation-text">
+                        <p style="font-size: 20px; margin-bottom: 10px; margin-top: -15px;">
+                            Desenvolvedor apaixonado por lógica algorítmica.
+                        </p>
+                        <p>
+                            Foco em excelência e entrega de valor. Gosto de entender problemas e criar soluções.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider" id="presentation-bottom-divider"></div>
+
+        <section id="about-me" class="portfolio-section">
             <header>
-                <h2 style="color: var(--light-text);">Sobre Mim</h2>
+                <h2 class="section-header-title">Sobre Mim</h2>
             </header>
 
             <article>
                 <p>
-                    Sou estudante de Análise e Desenvolvimento de Sistemas na Fatec São José dos Campos, com foco em computação em nuvem e desenvolvimento de software.
+                    Sou estudante de Análise e Desenvolvimento de Sistemas na Fatec São José dos Campos, com foco em
+                    computação em nuvem e desenvolvimento de software.
                 </p>
                 <p>
-                    Minha trajetória começou com interesse em lógica e desenvolvimento de jogos, evoluindo para projetos acadêmicos e para a área de cloud computing, onde participei de treinamento em AWS e representei o SENAI na SP Skills – Computação em Nuvem.
+                    Minha trajetória começou com interesse em lógica e desenvolvimento de jogos, evoluindo para
+                    projetos
+                    acadêmicos e para a área de cloud computing, onde participei de treinamento em AWS e representei
+                    o
+                    SENAI na SP Skills – Computação em Nuvem.
                 </p>
                 <p>
-                    Tenho interesse em construir soluções bem estruturadas, entendendo não apenas o código, mas também a arquitetura e o ambiente onde ele está inserido. Sigo desenvolvendo projetos, aprofundando meus conhecimentos em desenvolvimento e infraestrutura, com o objetivo de atuar profissionalmente em ambientes cloud.
+                    Tenho interesse em construir soluções bem estruturadas, entendendo não apenas o código, mas
+                    também a
+                    arquitetura e o ambiente onde ele está inserido. Sigo desenvolvendo projetos, aprofundando meus
+                    conhecimentos em desenvolvimento e infraestrutura, com o objetivo de atuar profissionalmente em
+                    ambientes cloud.
                 </p>
             </article>
-        </div>
-    </section>
+        </section>
 
-    <section id="tech-stack">
-        <div>
+        <div class="divider" id="about-me-bottom-divider"></div>
+
+        <section id="tech-stack" class="portfolio-section">
             <header>
-                <h2 style="color: var(--light-text);">Tecnologias</h2>
+                <h2 class="section-header-title">Tecnologias</h2>
             </header>
 
-            <img src="./files/python-logo.png" alt="logo python">
-        </div>
-    </section>
+            <ul id="tech-stack-list" style="list-style: none;">
+                <li>
+                    <div id="python-logo" class="tech-stack-logo"></div>
+                    <h4>Python</h4>
+                </li>
+                <li>
+                    <div id="javascript-logo" class="tech-stack-logo"></div>
+                    <h4>JavaScript</h4>
+                </li>
+                <li>
+                    <div id="aws-logo" class="tech-stack-logo"></div>
+                    <h4>AWS</h4>
+                </li>
+                <li>
+                    <div id="figma-logo" class="tech-stack-logo"></div>
+                    <h4>Figma</h4>
+                </li>
+            </ul>
+        </section>
 
+        <div class="divider" id="tech-stack-bottom-divider"></div>
+
+        <section id="projects" class="portfolio-section">
+            <div>
+                <header>
+                    <h2 class="section-header-title">Projetos</h2>
+                </header>
+
+                <section id="projects-cards-section">
+
+                </section>
+            </div>
+        </section>
+
+        <div class="divider" id="projects-bottom-divider"></div>
+
+        <section id="education" class="portfolio-section">
+            <header>
+                <h2 class="section-header-title">Formação</h2>
+            </header>
+
+            <ul id="education-timeline">
+                <li>
+                    <h3>Análise e Desenvolvimento de Sistemas</h3>
+                    <h4 style="color: var(--light-text);">Fatec Prof. Jessen Vidal</h4>
+                    <h4>2025 - Cursando</h4>
+                    <p>Programação, modelagem de
+                        sistemas, banco de dados e engenharia de software, inteligência artificial,
+                        computação em nuvem e segurança da informação</p>
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>Metodologia Ágil</li>
+                        <li>Outros</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Competidor AWS</h3>
+                    <h4 style="color: var(--light-text);">SENAI</h4>
+                    <h4>2023 - 2025</h4>
+                    <p>Treinamento Cloud Computing voltado para AWS</p>
+                    <ul class="tags">
+                        <li>EC2</li>
+                        <li>S3</li>
+                        <li>VPC</li>
+                        <li>RDS</li>
+                        <li>Outros</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Operador de Microcomputador</h3>
+                    <h4 style="color: var(--light-text);">SENAI</h4>
+                    <h4>2023</h4>
+                    <p>Hardware, Software, Firmware, Pacote Office</p>
+                    <ul class="tags">
+                        <li>Hardware</li>
+                        <li>Software</li>
+                        <li>Firmware</li>
+                        <li>Pacote Office</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Playgame</h3>
+                    <h4 style="color: var(--light-text);">Saga</h4>
+                    <h4>2022 - 2023</h4>
+                    <p>Desenvolvimento de Jogos 2D e 3D </p>
+                    <ul class="tags">
+                        <li>Unreal Engine</li>
+                        <li>Illustrator</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <div class="divider" id="education-bottom-divider"></div>
+
+
+        <footer id="footer">
+            <p>© 2026 Kauan Domingues</p>
+        </footer>
+    </section>
 </body>
+
 </html>
