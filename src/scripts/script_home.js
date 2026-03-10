@@ -10,6 +10,7 @@ document.addEventListener('mousemove', (e) => {
     overGlow.style.left = `${e.clientX}px`;
     pointer.style.top = `${e.clientY}px`;
     pointer.style.left = `${e.clientX}px`;
+    pointer.style.transform = `rotate(${e.spee}deg)`
 });
 
 //Able/Unable glow if mouse enter or leave window
@@ -57,6 +58,12 @@ function buildProjectCard(imgPath, projName, projDescription, projTags, projLink
         </div>`
 }
 
+function buildCertificationCard(name, path) {
+    return `
+        <div class="certification-preview" style="background-image: url(${path});"></div>
+        <p>${name}</p>`
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -75,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //Read projects.json and add card to html
-    fetch("./src/projects/projects.json").then(res => res.json().then(data => {
+    fetch("./src/json/projects.json").then(res => res.json().then(data => {
         data.projects.forEach(project => {
             let card = buildProjectCard(project.imgPath, project.name, project.description, project.tags, project.links);
             document.getElementById("projects-cards-section").innerHTML += card;
@@ -141,5 +148,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }, { once: true })
         }, 100)
     }
+
+    //Certifications 
+    let displayCertification = document.getElementById("display-certification");
+    let certificationView = document.getElementById("certification-view");
+    let title = document.getElementById("certification-title");
+
+    fetch("./src/json/certifications_paths.json").then(res => res.json().then(data => {
+        data.certifications.forEach(certification => {
+            let card = document.createElement('div');
+            card.className = 'certification-card';
+            card.innerHTML += buildCertificationCard(certification.name, certification.path);
+            document.getElementById("certifications").appendChild(card);
+
+            card.addEventListener('click', (e) => {
+                e.stopPropagation();
+                displayCertification.style.display = "flex";
+                certificationView.src = certification.path;
+                title.textContent = certification.name;
+            })
+
+
+        });
+    }))
+
+    window.addEventListener("click", (e) => {
+        if (!certificationView.contains(e.target)) {
+            displayCertification.style.display = "none";
+        }
+    });
 });
 

@@ -35,8 +35,77 @@
     line-height: 1.3;
 }
 
-@media (max-width: 900px){
+#certifications {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.certification-card {
+    background-color: var(--bglight);
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.certification-card:hover {
+    scale: 0.9;
+    translate: 0 -30;
+    border-color: var(--light-color-primary);
+    filter: brightness(0.7);
+}
+
+.certification-preview {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60%;
+}
+
+.certification-card p {
+    line-height: 1;
+    font-size: 10px;
+    color: var(--light-color-primary);
+}
+
+#display-certification {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#certification-view {
+    height: 80%;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+@media (max-width: 900px) {
     #education {
         max-width: 80%;
+    }
+
+    #certification-view {
+        height: auto;
+        width: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
     }
 }
