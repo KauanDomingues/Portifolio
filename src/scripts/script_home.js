@@ -28,6 +28,8 @@ document.addEventListener('mouseleave', () => {
 //theme controller
 document.getElementById("themeButton").onclick = () => {
     document.body.classList.toggle("light-mode");
+    const theme = document.body.classList.contains("light-mode") ? "light-mode" : "dark-mode";
+    localStorage.setItem("theme", theme)
     document.getElementById("theme-button").classList.toggle("rotated");
 };
 
@@ -66,6 +68,15 @@ function buildCertificationCard(name, path) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark-mode") {
+        document.body.classList.remove("light-mode");
+        document.getElementById("theme-button").classList.remove("rotated");
+    } else {
+        document.body.classList.add("light-mode");
+        document.getElementById("theme-button").classList.add("rotated");
+    }
 
     const kdHeaderText = document.getElementById('kdHeaderText');
 
