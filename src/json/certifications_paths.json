@@ -2,31 +2,31 @@
     "certifications": [
         {
             "name": "AWS Technical Essentials",
-            "path": "src/files/Certifications/aws_technical_essentials.png"
+            "path": "src/files/certifications/aws_technical_essentials.png"
         },
         {
             "name": "Programação",
-            "path": "src/files/Certifications/alura.png"
+            "path": "src/files/certifications/alura.png"
         },
         {
             "name": "Banco de Dados",
-            "path": "src/files/Certifications/CertificadoBancoDeDados.png"
+            "path": "src/files/certifications/CertificadoBancoDeDados.png"
         },
         {
             "name": "Git",
-            "path": "src/files/Certifications/certificadogit.png"
+            "path": "src/files/certifications/certificadogit.png"
         },
         {
             "name": "Operador de Microcomputador",
-            "path": "src/files/Certifications/CertificadoOperadorDeMicrocomputador.png"
+            "path": "src/files/certifications/CertificadoOperadorDeMicrocomputador.png"
         },
         {
             "name": "POO",
-            "path": "src/files/Certifications/CertificadoPOO.png"
+            "path": "src/files/certifications/CertificadoPOO.png"
         },
         {
             "name": "Playgame",
-            "path": "src/files/Certifications/sagaCertification.png"
+            "path": "src/files/certifications/sagaCertification.png"
         }
     ]
 }
