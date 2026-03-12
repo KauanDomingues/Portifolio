@@ -160,33 +160,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100)
     }
 
-    //Certifications 
-    let displayCertification = document.getElementById("display-certification");
-    let certificationView = document.getElementById("certification-view");
-    let title = document.getElementById("certification-title");
+    // //Certifications 
+    // let displayCertification = document.getElementById("display-certification");
+    // let certificationView = document.getElementById("certification-view");
+    // let title = document.getElementById("certification-title");
 
-    fetch("./src/json/certifications_paths.json").then(res => res.json().then(data => {
-        data.certifications.forEach(certification => {
-            let card = document.createElement('div');
-            card.className = 'certification-card';
-            card.innerHTML += buildCertificationCard(certification.name, certification.path);
-            document.getElementById("certifications").appendChild(card);
+    // fetch("./src/json/certifications_paths.json").then(res => res.json().then(data => {
+    //     data.certifications.forEach(certification => {
+    //         let card = document.createElement('div');
+    //         card.className = 'certification-card';
+    //         card.innerHTML += buildCertificationCard(certification.name, certification.path);
+    //         document.getElementById("certifications").appendChild(card);
 
-            card.addEventListener('click', (e) => {
-                e.stopPropagation();
-                displayCertification.style.display = "flex";
-                certificationView.src = certification.path;
-                title.textContent = certification.name;
-            })
+    //         card.addEventListener('click', (e) => {
+    //             e.stopPropagation();
+    //             displayCertification.style.display = "flex";
+    //             certificationView.src = certification.path;
+    //             title.textContent = certification.name;
+    //         })
 
 
-        });
-    }))
+    //     });
+    // }))
 
-    window.addEventListener("click", (e) => {
-        if (!certificationView.contains(e.target)) {
-            displayCertification.style.display = "none";
-        }
-    });
+    // window.addEventListener("click", (e) => {
+    //     if (!certificationView.contains(e.target)) {
+    //         displayCertification.style.display = "none";
+    //     }
+    // });
 });
 
